@@ -1,0 +1,22 @@
+.commMsg{
+    background-color: var(--BODY-BGCOLOR);
+    border-radius: 10px;
+    width: 60%;
+    height: 100%;
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+}
+.commMsg p,h2{
+    padding: 15px;
+    text-align: center;
+    background-color: inherit;
+}
+.commMsg  input {
+    width: fit-content;
+    padding: 10px;
+    margin: 20px;
+    background-color: var(--BTN-BGCOLOR);
+    border-radius: 10px;
+    color: var(--BTN-COLOR);
+    float:right;
+}

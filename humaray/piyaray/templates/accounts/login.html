@@ -1,0 +1,47 @@
+{% extends 'piyaray_main.html' %} 
+
+{% block title %}
+ Humaray Piyaray - Login
+ {% endblock %} 
+
+{% block content %}
+
+<div class="main-area">
+    <div class="box">
+        <div class="loginBox">
+            <div><h1>Login</h1></div>
+            <div>
+                    <form  method="POST" action="/login/">
+                        <div class="tabularList4">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <!-- username
+                        <input id="username" type="text"  name="username" placeholder="username"></input>
+                        password
+                        <input id="password" type="password" name="password" placeholder="password"></input> -->
+                        <p></p>
+                        <p></p>
+                        <input id="submit" class="button-90" type="submit" name="submit" value="Login"></input>
+                        </div>
+                    </form>
+            </div>
+            {% for message in messages %}
+                {% if message.level == 40 %}
+                    <span class="form-errors">{{message}}</span>
+                {% else %}
+                    <!-- <span id="info">{{message.level}} - {{message.tags}} - {{message}}</span> -->
+                    <span id="info">{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            <div style="padding:2vw">
+                <h4>Don't have an account?&nbsp &nbsp<span><a href="/register/">sign up for free</a></h4>
+                    <br>
+                <p>Forgot your credentials?&nbsp &nbsp<span><a href="/password_reset/">Reset password</a>&nbsp &nbsp <a href="/sendid/">Request Username</a></p>
+              
+            </div>
+       
+    </div>
+</div>
+
+{% endblock %}
+

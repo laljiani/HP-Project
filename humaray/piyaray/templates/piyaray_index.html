@@ -1,0 +1,30 @@
+{% extends 'piyaray_main.html' %} 
+
+{% block title %}
+    Humaray Piyaray - Home
+{% endblock  %}
+
+{% block content %}
+<div class="main-area">
+
+    <p style="font-weight: bold;">Inna lillahi wa inna ilayhi raji'un </p><p>(to Allah do we belong, and to Him do we return)</p>
+    <div class="tabularList4">
+        <section class= "refine sec1" >
+            Life presents us with undeniable truths, one of which is the loss of our loved ones. While we may become preoccupied with our own lives or relocate to distant places, the memory of our loved ones remains with us. Visiting their graves to pay our respects is a common desire, but not always feasible due to various circumstances. <span style="color: var(--LOGO-COLOR);font-weight: bold;">Humaray Piyaray </span> aims to honor and appreciate our loved ones through a range of services provided on a convenient platform. Our services prioritize reliability, transparency, and quality to ensure your loved ones are well taken care of.
+        </section>
+        <section class= "refine sec2" >
+            We are eager to serve you and are committed to enhancing our services based on your valuable feedback. Your satisfaction is our top priority, and we strive to make every interaction with our team a positive and rewarding experience. We are constantly working to improve ourselves, and your input is an essential component of our growth. Thank you for choosing us, and we look forward to continuing to serve you with excellence.
+        </section>
+        <section class="refine sec3" >
+            Regards,<br>
+            <span style="color: var(--LOGO-COLOR)">Humaray Piyaray</span> Management
+        </section>
+    </div>
+</div>
+<script>
+    var msg = `{{resp}}`
+    if (msg)
+        test(msg)
+</script>
+{% endblock  %}
+

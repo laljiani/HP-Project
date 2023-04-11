@@ -1,0 +1,14 @@
+{% if ug == 'admin'  or request.COOKIES.user_group == 'admin' %}
+<ul class="nav-ul">
+  <li><a href="/list/model:Customer">subscribers</a></li> 
+  <li><a href="/list/model:Grave">graves</a></li>
+  <li><a href="/list/model:Services">services</a></li>
+  <li><a href="/list/model:Graveyard/">graveyards-admin</a></li>
+  <li><a href="/orders/">orders</a></li>
+</ul>
+{% else %}
+<ul class="nav-ul">
+  <li><a href="/list/model:Customer">subscribers</a></li> 
+  <li><a href="/list/model:Grave">graves</a></li>
+</ul>
+{% endif %}

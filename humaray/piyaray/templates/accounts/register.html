@@ -1,0 +1,57 @@
+{% extends 'piyaray_main.html' %} 
+
+{% block title %}
+ Humaray Piyaray - Registration
+List {% endblock %} 
+
+{% block content %}
+
+<div class="main-area ">
+    <div class="box">
+        <div class="loginBox">
+            <div><h1>Register Account</h1></div>
+            <div>
+                <form  method="POST" action="">
+                    {% csrf_token %}
+                    <div class="tabularList4">
+                        {{form.first_name.label}}
+                        {{form.first_name}}
+                        {{form.last_name.label}}
+                        {{form.last_name}}
+                        {{form.username.label}}
+                        {{form.username}}
+                        {{form.email.label}}
+                        {{form.email}}
+                        {{form.password1.label}}
+                        {{form.password1}}
+                        {{form.password2.label}}
+                        {{form.password2}}
+                        {{form.mobile.label}}
+                        {{form.mobile}}
+                        <input id="submit" class="btn-f" type="submit" name="create user" value="Register"></input>
+                    </div>
+                </form>
+                {% for field in form %}
+                {% if field.errors %}
+                    <div class="alert a;ert-danger">
+                        {{field.errors}}
+                    </div>
+                {% endif %}
+              {% endfor %}
+                {% for message in messages %}
+                {% if message.level == 40 %}
+                    <span class="form-errors">{{message}}</span>
+                {% else %}
+                    <!-- <span id="info">{{message.level}} - {{message.tags}} - {{message}}</span> -->
+                    <span id="info">{{message}}</span>
+                {% endif %}
+            {% endfor %}
+            </div>  
+            <div>
+                <h4> Already have an account?&nbsp &nbsp<span><a href="/piyaray/login/">login</a></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

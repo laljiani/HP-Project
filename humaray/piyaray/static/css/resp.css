@@ -1,0 +1,134 @@
+
+header a{
+    text-decoration: none;
+}
+header{
+    padding: 0 20px;
+    background-color: var(--HEADER-BGCOLOR);
+    height: 50px;
+    display: flex;
+    justify-content:space-around;
+    /* overflow: hidden;  Itt must be removed with position sticky and dropdown menu together*/
+    position: sticky;
+    top: 0; /* position to stick to */
+}
+
+ ul{
+    list-style: none;
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+ ul a{
+    text-decoration: none;
+    color: var(--HEADER-TEXT-COLOR);
+}
+ ul li{
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.menu-wrapper ul :hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    color: var(--HEADER-HOVER-COLOR);
+}
+
+#hamburger-icon{
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+}
+#hamburger-icon div{
+    width: 35px;
+    height: 3px;
+    background-color: var(--BODY-BGCOLOR);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-6px,6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+.open .bar2{
+    opacity: 0;
+}
+.open .bar3{
+    -webkit-transform: rotate(45deg) translate(-6px,-8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu {
+    padding-right:  20px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content: flex-start;
+    height: 80vh;
+    background-color: #333;
+    z-index: 1;
+}
+.open #botSub {
+    padding-right:  20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:flex-end;
+    justify-content: flex-start;
+    /* color: blue; */
+    /* color: var(--HEADER-TEXT-COLOR); */
+    background-color: #333;
+    z-index: 1;
+}
+.mobile-menu{
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0; 
+    height: calc(100vh - 50px);
+    width: 100%;
+    background-color: #333;
+}
+
+
+
+#user {
+    color: var(--HEADER-TEXT-COLOR);
+    /* height: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
+    border: 2px solid var(--LOGO-COLOR);
+    border-radius: 50%;
+    margin: 5px 0;
+    padding: 5px;
+    font-size: var(--FS-small);
+}
+
+.hide{
+    display: none;
+  }
+
+#hamburger-icon-bottom{
+    margin: auto 0;
+    /* float: right; */
+    display: none;
+    cursor: pointer;
+    width: 100%;
+}
+#hamburger-icon-bottom div{
+    width: 35px;
+    height: 3px;
+    background-color: var(--BODY-BGCOLOR);
+    margin: 6px 0;
+    transition: 0.4s;
+    display: block;
+    position:relative;
+    right:calc(15vw - 100vw);
+    bottom: 0px;
+}
+
+
+
+
+

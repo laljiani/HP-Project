@@ -1,0 +1,29 @@
+
+<div class="menu-wrapper2">
+  {% if ug == 'admin'  or request.COOKIES.user_group == 'admin' %}
+  <section  class="bottom">
+    <ul>  
+        <li>IP: {{ip_address}}</li>
+        <li><a href="/piyaray/test/">test</a></li>
+        <li onclick="tester()">onclick</li>
+    </ul>
+    </section> 
+    {% else %}
+    <section  class="bottom">
+      <ul>  
+          <li>IP: {{ip_address}} </li>
+          <li><a href="/test/">test</a></li>
+          <li onclick="tester()">onclick</li>
+      </ul>
+      </section> 
+
+    {% endif %}
+</div>
+
+
+
+
+
+
+
+

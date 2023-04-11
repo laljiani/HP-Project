@@ -1,0 +1,30 @@
+
+<div id="logo"> <a href="/index/"><span class="spanBlock smallFonts">Humaray</span><span class="spanBlock">Piyaray</span></a></div>
+<div class="user_active">
+  <ul>
+    <li><a href="/index/">&#127968 Home</a></li>
+ </ul>
+</div>
+<!-- <div class="home"><a href="/index/">&#127968</a></div> -->
+<div class="menu-wrapper">
+  <section  id = "logged" class="user_active">
+    <ul>
+      <li onclick="CreateServicesMenu(this)">Services</li>
+      <li onclick="CreateGraveyardMenu(this)">Graveyards</li>
+      <li><a href="/contact">Contact Us</a></li> 
+      <li><a href="/help/">FAQs</a></li> 
+       <li><a href="/logout/">logout</a></li>
+    </ul>
+  </section>
+  <section  id="notLogged" class="user_inactive">
+    <ul>
+      <li onclick="CreateServicesMenu(this)">Services</li>
+      <li onclick="CreateGraveyardMenu(this)">Graveyards</li>
+      <li><a href="/contact">Contact Us</a></li> 
+      <li><a href="/help/">FAQs</a></li> 
+      <li><a href="/login/">login</a></li>
+      <li><a href="/register/">sign up</a></li>
+    </ul>
+  </section> 
+</div>
+<script> userLogging()</script>

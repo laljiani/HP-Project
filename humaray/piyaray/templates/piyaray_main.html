@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Muhammad Iqbal"></meta>
+    <meta name="description" content="The official website for the piyaray services"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Humaray Piyaray{% endblock %}</title>
+    <link href="{{ STATIC_URL}}/static/css/commMsg.css" rel="stylesheet"  type="text/css" />
+    <link href="{{ STATIC_URL}}/static/css/resp.css" rel="stylesheet"  type="text/css" />
+    <link href="{{ STATIC_URL}}/static/css/styles.css" rel="stylesheet"  type="text/css" />
+    <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ STATIC_URL}}/static/js/scripts.js"></script>
+</head>
+<body>
+    <section id="page">
+        <header>
+            {% include 'piyaray_header.html'%}
+        </header>
+        <nav> 
+            {% include 'piyaray_nav.html'%}
+        </nav>
+        <main>
+            <section id="main-section">
+                {% block content %}
+
+                {% endblock %}
+            </section>
+        </main>
+        
+        <footer>
+            {% include 'piyaray_footer.html' %}
+        </footer>
+    </section>
+
+
+</body>
+</html>

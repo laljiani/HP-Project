@@ -1,0 +1,30 @@
+{% extends 'piyaray_main.html' %} 
+
+{% block title %}
+ Humaray Piyaray - Username Request
+ {% endblock %} 
+
+{% block content %}
+<div class="main-area">
+  <div class="box">
+      <div class="loginBox">
+        <h1>Request User Id</h1>
+        <br>
+          <p>Enter your registered email address below, and we'll email username to you.</p>
+          <br>
+
+          <form method="POST">
+              {% csrf_token %}
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input id="email"  type="email" name="email" placeholder="email address"/>
+              </div>
+              <p></p>
+              <p></p>
+              <p></p>
+                <button id="submit" class="btn-f1" type="submit">Submit</button>
+          </form>
+        {% endblock %}
+      </div>
+    </div>
+</div>
