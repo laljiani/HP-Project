@@ -78,15 +78,22 @@ WSGI_APPLICATION = 'humaray.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#    'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'hpdb',
+#         'USER': 'admin',
+#         'PASSWORD': 'Karach!19',
+#         'HOST': 'hpdb.cktgzo2alsi5.us-west-2.rds.amazonaws.com',
+#         'PORT': '3306',
+#    }
+# }
+
 DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'hpdb',
-        'USER': 'admin',
-        'PASSWORD': 'Karach!19',
-        'HOST': 'hpdb.cktgzo2alsi5.us-west-2.rds.amazonaws.com',
-        'PORT': '3306',
-   }
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
